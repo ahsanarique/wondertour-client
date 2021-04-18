@@ -24,7 +24,9 @@ const Header = () => {
             </p>
           </div>
           <div>
-            <Button variant="light">Explore More</Button>
+            <Button variant="light" href="#services">
+              Explore More
+            </Button>
           </div>
         </div>
 
