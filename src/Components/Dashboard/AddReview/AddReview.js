@@ -20,7 +20,7 @@ const AddReview = ({ serviceData }) => {
       image: loggedInUser.image,
     };
 
-    fetch("http://localhost:5000/addReview", {
+    fetch("https://pure-inlet-21064.herokuapp.com/addReview", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

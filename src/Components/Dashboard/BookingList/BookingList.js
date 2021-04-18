@@ -9,7 +9,7 @@ const BookingList = ({ bookingStatus }) => {
     const email = {
       email: loggedInUser.email,
     };
-    fetch("http://localhost:5000/bookingsFromUser", {
+    fetch("https://pure-inlet-21064.herokuapp.com/bookingsFromUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

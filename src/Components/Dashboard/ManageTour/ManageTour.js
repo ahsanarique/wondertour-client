@@ -12,7 +12,7 @@ const ManageTour = () => {
     const deleteId = event.currentTarget.id;
     setDeleteId(deleteId);
 
-    fetch("http://localhost:5000/services")
+    fetch("https://pure-inlet-21064.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => {
         setServiceData(data);
@@ -21,13 +21,13 @@ const ManageTour = () => {
 
   useEffect(() => {
     if (deleteId !== "") {
-      const url = `http://localhost:5000/deleteService/${deleteId}`;
+      const url = `https://pure-inlet-21064.herokuapp.com/deleteService/${deleteId}`;
       axios.delete(url);
     }
   }, [deleteId, serviceData]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://pure-inlet-21064.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => {
         setServiceData(data);

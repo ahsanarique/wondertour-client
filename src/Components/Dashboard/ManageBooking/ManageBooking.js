@@ -12,7 +12,7 @@ const ManageBooking = () => {
     setUpdateStatus(event.target.value);
     setBookingId(event.target.id);
 
-    fetch("http://localhost:5000/bookings")
+    fetch("https://pure-inlet-21064.herokuapp.com/bookings")
       .then((res) => res.json())
       .then((data) => {
         setAllBookings(data);
@@ -20,13 +20,13 @@ const ManageBooking = () => {
   };
 
   useEffect(() => {
-    axios.put(`http://localhost:5000/bookings/${bookingId}`, {
+    axios.put(`https://pure-inlet-21064.herokuapp.com/bookings/${bookingId}`, {
       status: updateStatus,
     });
   }, [bookingId, updateStatus]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/bookings")
+    fetch("https://pure-inlet-21064.herokuapp.com/bookings")
       .then((res) => res.json())
       .then((data) => {
         setAllBookings(data);

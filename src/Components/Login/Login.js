@@ -31,7 +31,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/checkAdmin")
+    fetch("https://pure-inlet-21064.herokuapp.com/checkAdmin")
       .then((res) => res.json())
       .then((data) => {
         setAdminEmail(data.map((x) => x.email));

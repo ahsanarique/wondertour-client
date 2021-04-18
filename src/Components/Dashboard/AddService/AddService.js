@@ -24,7 +24,7 @@ const AddService = () => {
       dateAdded: new Date().toDateString(),
     };
 
-    fetch("http://localhost:5000/addService", {
+    fetch("https://pure-inlet-21064.herokuapp.com/addService", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

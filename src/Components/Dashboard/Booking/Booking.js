@@ -18,7 +18,7 @@ const Booking = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`https://pure-inlet-21064.herokuapp.com/services/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setBookedTour(data);
@@ -42,7 +42,7 @@ const Booking = () => {
     delete bookingData._id;
     delete bookingData.date;
 
-    fetch(`http://localhost:5000/placeBooking`, {
+    fetch(`https://pure-inlet-21064.herokuapp.com/placeBooking`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
