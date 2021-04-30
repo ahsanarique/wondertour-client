@@ -9,7 +9,7 @@ const ReviewCard = ({ review }) => {
   };
 
   return (
-    <div className="col-md-6 card p-4 m-2" style={{ maxWidth: "50rem" }}>
+    <div className="col-md-6 card p-4 m-2" style={{ maxWidth: "30rem" }}>
       <div className="card-body">
         <div className="d-flex card-footer border-0">
           <div className="me-3">
