@@ -26,16 +26,15 @@ const Reviews = () => {
   return (
     <section
       id="reviews"
-      style={{ maxWidth: "100rem" }}
-      className="card my-5 border-0 bg-transparent"
+      className="my-5 mx-2"
     >
-      <div className="card-body">
-        <div className="d-flex">
+      <div className="row">
+        <div className="col-sm-12 d-flex">
           <div>
-            <h6 className="card-title" style={{ color: "#1CC7C1" }}>
+            <h6 style={{ color: "#1CC7C1" }}>
               REVIEWS
             </h6>
-            <h2 className="card-subtitle">
+            <h2>
               Reviews from Our <br /> Clients
             </h2>
           </div>
@@ -44,9 +43,11 @@ const Reviews = () => {
           </div>
         </div>
 
-        <div className="row d-flex justify-content-center">
+        <div className="col-sm-12 row">
           {reviewData.map((review) => (
-            <ReviewCard key={review._id} review={review} />
+            <div key={review._id} className="col-lg-3 col-md-6 col-sm-12">
+              <ReviewCard review={review} />
+            </div>
           ))}
         </div>
       </div>

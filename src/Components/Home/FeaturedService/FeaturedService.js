@@ -21,12 +21,11 @@ const FeaturedService = () => {
 
   return (
     <section
-      className="card container-fluid border-0"
       style={featuredImgBg}
       id="upcoming"
     >
       <div
-        style={{ maxWidth: "20rem", height: "20rem" }}
+        style={{ maxWidth: "20rem"}}
         className="card m-5 bg-dark text-light"
       >
         {featuredTour.map((featured, i) => (
@@ -45,7 +44,7 @@ const FeaturedService = () => {
             <div className="card-text m-3">{featured.description}</div>
             <div className="d-grid mt-5">
               <Link to="/dashboard/booking">
-                <button className="btn btn-light">Book This Tour</button>
+                <button className="btn btn-warning">Book This Tour</button>
               </Link>
             </div>
           </div>

@@ -42,7 +42,7 @@ const NavigationBar = () => {
               <Link to="/" className="nav-link mx-3" aria-current="page">
                 Home
               </Link>
-              <a className="nav-link mx-3" href="#booking">
+              <a className="nav-link mx-3" href="#services">
                 Booking
               </a>
               <a className="nav-link mx-3" href="#upcoming">

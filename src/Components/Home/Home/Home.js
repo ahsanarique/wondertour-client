@@ -8,13 +8,13 @@ import Reviews from "../Reviews/Reviews";
 
 const Home = () => {
   return (
-    <section className="d-flex flex-column align-items-center">
-      <Header />
-      <Services />
-      <FeaturedService />
-      <Reviews />
-      <ContactUs />
-      <Footer />
+    <section>
+        <Header />
+        <Services />
+        <FeaturedService />
+        <Reviews />
+        <ContactUs />
+        <Footer /> 
     </section>
   );
 };

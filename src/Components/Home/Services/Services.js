@@ -14,13 +14,14 @@ const Services = () => {
 
   return (
     <section
-      style={{ maxWidth: "100rem" }}
-      className="card mb-5 border-0 bg-transparent"
+      className="mb-5 mx-2"
       id="services"
     >
-      <div className="row d-flex justify-content-center">
+      <div className="row">
         {serviceData.map((service) => (
-          <ServiceCard key={service._id} service={service} />
+          <div className="col-lg-4 col-md-6 col-sm-12" key={service._id}>
+            <ServiceCard service={service} />
+          </div>
         ))}
       </div>
     </section>

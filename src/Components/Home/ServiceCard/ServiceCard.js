@@ -14,12 +14,12 @@ const ServiceCard = ({ service }) => {
   const mapIcon = <FontAwesomeIcon icon={faMap} />;
 
   return (
-    <div style={{ width: "25rem" }} className="col-md-6 card m-2 animated">
+    <div className="card m-2 animated">
       <div className="card-body d-flex flex-column align-items-center">
         <div>
           <img
-            style={{ height: "15rem", width: "20rem" }}
-            className="card-img-top"
+            style={{height: "20rem"}}
+            className="card-img-top w-100"
             src={service.image}
             alt=""
           />
@@ -52,10 +52,11 @@ const ServiceCard = ({ service }) => {
         style={{ textDecoration: "none" }}
         to={`/dashboard/booking=${service._id}`}
       >
-        <div className="d-grid mb-3">
-          <button className="btn btn-light">Book This Tour</button>
+        <div className="d-grid mb-3 mx-3">
+          <button className="btn btn-warning">Book This Tour</button>
         </div>
       </Link>
+      
     </div>
   );
 };

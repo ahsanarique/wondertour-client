@@ -6,7 +6,6 @@ import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import NavigationBar from "./Components/Shared/NavigationBar/NavigationBar";
 import Dashboard from "./Components/Dashboard/Dashboard/Dashboard";
 import Footer from "./Components/Shared/Footer/Footer";
-import "./App.css";
 
 export const UserContext = createContext();
 

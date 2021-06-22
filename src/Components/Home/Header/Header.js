@@ -13,7 +13,7 @@ const Header = () => {
     <section style={headerBgStyle} className="text-light mb-5">
       <NavigationBar />
       <Jumbotron className="row mx-5">
-        <div className="col-md-6 d-flex flex-column justify-content-center">
+        <div className="col-md-6 col-sm-12 d-flex flex-column justify-content-center">
           <div>
             <h1>Explore Your Travel</h1>
           </div>
@@ -24,13 +24,13 @@ const Header = () => {
             </p>
           </div>
           <div>
-            <Button variant="light" href="#services">
+            <Button variant="warning" href="#services">
               Explore More
             </Button>
           </div>
         </div>
 
-        <div className="col-md-6">
+        <div className="col-md-6 col-sm-12">
           <img className="pe-5 m-5 img-fluid" src={header} alt="" />
         </div>
       </Jumbotron>
