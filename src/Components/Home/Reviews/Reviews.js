@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import ReviewCard from "../ReviewCard/ReviewCard";
+import { Spinner } from "react-bootstrap";
 
 const Reviews = () => {
   const [reviewData, setReviewData] = useState([]);
@@ -24,16 +25,11 @@ const Reviews = () => {
   );
 
   return (
-    <section
-      id="reviews"
-      className="my-5 mx-2"
-    >
+    <section id="reviews" className="my-5 mx-2">
       <div className="row">
         <div className="col-sm-12 d-flex">
           <div>
-            <h6 style={{ color: "#1CC7C1" }}>
-              REVIEWS
-            </h6>
+            <h6 style={{ color: "#1CC7C1" }}>REVIEWS</h6>
             <h2>
               Reviews from Our <br /> Clients
             </h2>
@@ -45,10 +41,15 @@ const Reviews = () => {
 
         <div className="col-sm-12 row">
           {reviewData.map((review) => (
-            <div key={review._id} className="col-lg-3 col-md-6 col-sm-12">
+            <div key={review._id} className="col-lg-4 col-md-6 col-sm-12">
               <ReviewCard review={review} />
             </div>
           ))}
+          {reviewData.length < 1 && (
+            <div className="d-flex justify-content-center">
+              <Spinner variant="warning" animation="border" size="lg" />
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -18,7 +18,7 @@ const ServiceCard = ({ service }) => {
       <div className="card-body d-flex flex-column align-items-center">
         <div>
           <img
-            style={{height: "20rem"}}
+            style={{ height: "20rem" }}
             className="card-img-top w-100"
             src={service.image}
             alt=""
@@ -56,7 +56,6 @@ const ServiceCard = ({ service }) => {
           <button className="btn btn-warning">Book This Tour</button>
         </div>
       </Link>
-      
     </div>
   );
 };

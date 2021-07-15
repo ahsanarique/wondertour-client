@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ServiceCard from "../ServiceCard/ServiceCard";
+import { Spinner } from "react-bootstrap";
 
 const Services = () => {
   const [serviceData, setServiceData] = useState([]);
@@ -13,16 +14,18 @@ const Services = () => {
   }, []);
 
   return (
-    <section
-      className="mb-5 mx-2"
-      id="services"
-    >
+    <section className="mb-5 mx-2" id="services">
       <div className="row">
         {serviceData.map((service) => (
-          <div className="col-lg-4 col-md-6 col-sm-12" key={service._id}>
+          <div className="col col-lg-4 col-md-6 col-sm-12" key={service._id}>
             <ServiceCard service={service} />
           </div>
         ))}
+        {serviceData.length < 1 && (
+          <div className="d-flex justify-content-center">
+            <Spinner variant="warning" animation="border" size="lg" />
+          </div>
+        )}
       </div>
     </section>
   );
